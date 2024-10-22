@@ -8,6 +8,8 @@ A brief description of your project and its purpose.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
+- [Training the Model](#training-the-model)
+- [Running the Application](#running-the-application)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -23,27 +25,39 @@ To get started with this project, clone the repository and install the necessary
 git clone https://github.com/yourusername/yourproject.git
 cd yourproject
 # Install dependencies (if any)
-```
+pip install -r requirements.txt
+````
+
 
 ## Usage
 
-Provide instructions on how to use your project. For example:
+### Dataset
+
+The dataset can be downloaded from Kaggle using the following link:
+
+[Download Dataset](https://www.kaggle.com/code/antniorodrigues20000/naivebayes-notextcleaning-87-acc#Running-some-experiments-with-a-NaiveBayes-model)
+
+After downloading, place the `reddit_depression_dataset.csv` file in the project directory.
+
+### Training the Model
+
+Before running the application, you need to train the model. Run the following command:
 
 ```bash
-python main.py
+python train_model.py
 ```
 
-Make sure to replace `main.py` with the actual entry point of your application.
 
-## Dataset
+This script will train the Naive Bayes model using the dataset.
 
-The dataset used in this project is `reddit_depression_dataset.csv`. This file contains:
+### Running the Application
 
-- **Column 1**: Description of the first column
-- **Column 2**: Description of the second column
-- (Add more columns as necessary)
+Once the model is trained, you can run the Streamlit application with the following command:
 
-Please note that this file is included in the `.gitignore` to prevent it from being tracked by Git.
+```bash
+streamlit run app.py
+```
+
 
 ## Contributing
 
@@ -52,3 +66,9 @@ If you would like to contribute to this project, please fork the repository and 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+`````
+
+### Explanation:
+- The `README.md` now specifies that the application is a Streamlit app and includes the command `streamlit run app.py` to run it.
+- It also includes a command to install dependencies from a `requirements.txt` file, which is a common practice for Python projects. Make sure to create this file if it doesn't exist and list all necessary packages.
+- Replace placeholders like `yourusername` and `yourproject` with actual information relevant to your project.
